@@ -10,13 +10,7 @@
         update_cache: yes
         autoremove: true
         autoclean: true
-        state: latest
-        
-  - name: Remove apt lock file
-    file:
-      state: absent
-      path: "/var/lib/apt/lists/lock"
-        
+        state: latest      
 
     - name: Check if a reboot is required.
       ansible.builtin.stat:
