@@ -8,6 +8,9 @@
       ansible.builtin.apt:
         upgrade: dist
         update_cache: yes
+        autoremove: true
+        autoclean: true
+        state: latest
 
     - name: Check if a reboot is required.
       ansible.builtin.stat:
