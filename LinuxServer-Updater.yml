@@ -7,8 +7,4 @@
       apt:
         upgrade: yes
         update_cache: yes 
-  file:
-    path: /var/lib/apt/lists/
-    state: directory
-    mode: 0755
-
+        
