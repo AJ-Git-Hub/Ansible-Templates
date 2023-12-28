@@ -1,7 +1,10 @@
-- name: Apply Linux updates
-  hosts: all
-  become: yes
+---
+- hosts: all
 
-  roles:
-    - linux_update
+  become: true
+  tasks:
+    - name: update apt packages
+      apt:
+        upgrade: yes
+        update_cache: yes
         
