@@ -1,9 +1,10 @@
 ---
-- name: Patching the linux system using patching roles
-  hosts: all
+- hosts: all
+
   become: true
-  vars:
-    Patching_type: "NOREBOOT"
-  roles:
-    - patching
+  tasks:
+    - name: update apt packages
+      apt:
+        upgrade: yes
+        update_cache: yes
         
