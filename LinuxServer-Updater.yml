@@ -6,9 +6,7 @@
     - name: update apt packages
       apt:
         upgrade: yes
-        update_cache: yes
-        
-  - name: packages | ensure apt list dir exists
+        update_cache: yes 
   file:
     path: /var/lib/apt/lists/
     state: directory
